@@ -1,67 +1,40 @@
-
+// Base class Animal
 class Animal {
-
+    // Method in the base class
     public void makeSound() {
-
         System.out.println("Some generic animal sound");
-
     }
-
 }
 
+// Derived class Dog
 class Dog extends Animal {
-
+    // Overriding the makeSound() method in Dog class
     @Override
-
     public void makeSound() {
-
-        System.out.println("Woof! Woof!");
-
+        System.out.println("Woof Woof");
     }
-
 }
 
+// Derived class Cat
 class Cat extends Animal {
-
+    // Overriding the makeSound() method in Cat class
     @Override
-
     public void makeSound() {
-
-        System.out.println("Meow! Meow!");
-
+        System.out.println("Meow Meow");
     }
-
 }
 
-public class PolymorphismDemo {
-
+public class AnimalTest {
     public static void main(String[] args) {
+        // Creating objects of Dog and Cat
+        Animal myDog = new Dog();  // Animal reference, Dog object
+        Animal myCat = new Cat();  // Animal reference, Cat object
 
-        Animal animal1 = new Dog();
+        // Demonstrating polymorphism
+        System.out.println("Dog sound: ");
+        myDog.makeSound();  // Calls Dog's makeSound()
 
-        Animal animal2 = new Cat();
-
-        System.out.println("Animal reference holding Dog object:");
-
-        animal1.makeSound(); 
- 
-
-        System.out.println("\nAnimal reference holding Cat object:");
-
-        animal2.makeSound(); 
-
-        Animal[] animals = {new Dog(), new Cat()};
-
-        System.out.println("\nDemonstrating polymorphism in an array:");
-
-        for (Animal animal : animals) {
-
-            animal.makeSound(); 
-
-        }
-
+        System.out.println("Cat sound: ");
+        myCat.makeSound();  // Calls Cat's makeSound()
     }
-
 }
-
- 
