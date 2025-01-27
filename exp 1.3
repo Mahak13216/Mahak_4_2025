@@ -1,0 +1,25 @@
+
+public class Employee {
+    String name;
+    double salary;
+    public Employee() {
+        name = "Unknown";
+        salary = 0;
+    }
+    public Employee(String name) {
+        this.name = name;
+        this.salary = 50000; 
+      }
+    public void DisplayEmployeeDetails() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee Salary: " + salary);
+    }
+
+    public static void main(String[] args) {
+      
+        Employee employee1 = new Employee();
+        employee1.DisplayEmployeeDetails();
+        Employee employee2 = new Employee("John Doe");
+        employee2.DisplayEmployeeDetails();
+    }
+}
